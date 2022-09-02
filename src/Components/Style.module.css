@@ -20,6 +20,7 @@
 .QuotesBox{
     text-align: center;
     border:2px solid green;
+
     font-size: 15px;
     width: max-content;
 }
@@ -43,4 +44,18 @@
     font-size: 15px;
     margin-left: 15px;
     margin-top: 15px;
+
+    font-size: 20px;
+}
+.weatherContainer{
+    display: flex;
+    gap: 20px;
+    /* border: 2px solid yellow; */
+}
+.weatherContainer:last-child{
+    line-height: 0px;
+}
+.weatherContainer>div:first-child{
+    font-size: 40px;
+
 }
