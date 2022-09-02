@@ -1,10 +1,16 @@
+import { Button, Flex, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure,Box,Image,Text} from '@chakra-ui/react';
 import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import style from "./Style.module.css"
+import { useRef } from 'react';
 
 const News = () => {
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [scrollBehavior, setScrollBehavior] = React.useState('inside')
+  const btnRef = React.useRef(null)
 const [news,setNews]=useState([])
   let dateObj = new Date();
 
@@ -21,22 +27,47 @@ const [news,setNews]=useState([])
  
 
   return (
-    <div className={style.newsmain}>
+    <>
+    <Button mt={3} ref={btnRef} onClick={onOpen} color="black"backgroundColor="white">
+        News
+      </Button>
+     <Modal
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        isOpen={isOpen}
+        scrollBehavior={scrollBehavior}
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Technology News</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+          <Box>
       {
         news.map((e)=>(
           <>
-          <div className={style.newtitle}><h3>{e.title}</h3></div>
-          <div className={style.newcontainer}>
-          <div><img src={e.urlToImage} className={style.newsimg}/></div>
-          <div>
-              <div><h4>{e.author}</h4></div>
-              <div><p>{e.description}</p></div>
-          </div>
-          </div>
+          <Box boxShadow="rgba(0, 0, 0, 0.1) 0px 4px 12px" borderRadius="10px"marginBottom="30px" >
+          <Box><Text fontSize="2xl" width="100%"fontWeight="bold">{e.title}</Text></Box>
+          <Flex gap={"20px"}>
+          <Box><Image src={e.urlToImage} height="100%"borderBottomLeftRadius="10px"/></Box>
+          <Box>
+              <Box><Text fontSize="1xl"fontWeight="bold">{e.author}</Text></Box>
+              <Box><Text>{e.description}</Text></Box>
+          </Box>
+          </Flex>
+          </Box>
           </>
         ))
       }
-    </div>
+    </Box>
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={onClose}>Close</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
+    </>
   )
 }
 

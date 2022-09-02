@@ -6,6 +6,7 @@ import style from "./Style.module.css";
 import Quotes from "./Quotes";
 import { Todo } from "./Todo/Todo";
 import News from "./News";
+import { Box, Flex } from "@chakra-ui/react";
 
 const UnplashedBg = () => {
   const [title, setTitle] = useState("Palau");
@@ -39,7 +40,7 @@ const UnplashedBg = () => {
     <div style={myStyle} id={style.myStyle}>
       <div className={style.topbox}>
         <div>Links</div>
-        {/* <div> <Weather/> </div> */}
+        <div><Weather/></div>
       </div>
       <div className={style.timeBox}>
         <Time />
@@ -51,11 +52,10 @@ const UnplashedBg = () => {
           <p>{country}</p>
         </div>
         <Quotes />
-        <div className={style.TodoNews}>
-          <button><Todo/></button>
-          <button><News/></button>
-
-        </div>
+        <Flex gap="30px"alignItems="center">
+          <Box><Todo/></Box>
+          <Box><News/></Box>
+        </Flex>
       </div>
     </div>
   );
