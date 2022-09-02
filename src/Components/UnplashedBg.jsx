@@ -8,7 +8,7 @@ const UnplashedBg = () => {
     useEffect(() => {
     axios.get("https://api.unsplash.com/photos/random/?orientation=landscape&count=1&client_id=Jjl5auiyfxoz-DTmaFtBj29XEL3sPNuQq5g1c5FoOPA")
     .then((res)=>{
-        console.log(res.data[0].urls.full)
+        // console.log(res.data[0].urls.full)
        return  setbg(res.data[0].urls.full)
     })
     }, [])
@@ -17,7 +17,7 @@ const UnplashedBg = () => {
  `url(${bg})`,
         height:'100vh',
       
-       
+        color:"white",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
     };
