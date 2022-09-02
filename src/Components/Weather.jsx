@@ -54,7 +54,13 @@ const Weather = () => {
   
  
   return (
-    <div>Weather{temp}°C</div>
+    <>
+    <div>
+      <h3>Weather{temp}°C</h3>
+      <p>{city}</p>
+    </div>
+   
+    </>
   )
 }
 

@@ -1,0 +1,24 @@
+.topbox{
+    height:150px;
+    border:2px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.topbox>div{
+    border:2px solid blue
+}
+.timeBox{
+    border:2px solid white;
+    margin:auto;
+    text-align:center;
+    font-weight: unset;
+}
+.myStyle{
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.QuotesBox{
+    text-align: center;
+    border:2px solid green;
+    font-size: 20px;
+}
