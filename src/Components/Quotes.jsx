@@ -1,8 +1,19 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+
 
 const Quotes = () => {
+
+  const [quote,setQuote] =useState("");
+  useEffect(() => {
+   axios.get("https://motivational-quote-api.herokuapp.com/quotes/random")
+   .then((res=>setQuote(res.data.quote)));
+  }, [])
+  
   return (
-    <div>Quotes</div>
+    <div>
+      {quote}
+    </div>
   )
 }
 
