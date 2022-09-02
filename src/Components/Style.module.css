@@ -20,6 +20,31 @@
 .QuotesBox{
     text-align: center;
     border:2px solid green;
+
+    font-size: 15px;
+    width: max-content;
+}
+.QutoeandTodoBox{
+    border: 2px solid aqua;
+    display: flex;
+    justify-content: space-around;
+}
+.Country{
+    border:2px solid red;
+    width: max-content;
+}
+.TodoNews{
+    border:2px solid plum;
+    width: max-content;
+    /* display: flex;
+    gap:10px */
+}
+.TodoNews>button{
+    padding: 1rem;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+
     font-size: 20px;
 }
 .weatherContainer{
