@@ -1,30 +1,50 @@
 import axios from 'axios'
 import React, { useEffect ,useState} from 'react';
+import Time from './Time';
+import Weather from "./Weather";
+import style from "./Style.module.css"
+import Quotes from './Quotes';
+
+
 
 
 const UnplashedBg = () => {
     const[bg,setbg]=useState("https://images.unsplash.com/photo-1544247341-a0ab7d0955c5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjcwOTV9");
 
-    useEffect(() => {
-    axios.get("https://api.unsplash.com/photos/random/?orientation=landscape&count=1&client_id=Jjl5auiyfxoz-DTmaFtBj29XEL3sPNuQq5g1c5FoOPA")
-    .then((res)=>{
-        // console.log(res.data[0].urls.full)
-       return  setbg(res.data[0].urls.full)
-    })
-    }, [])
+    // useEffect(() => {
+    // axios.get("https://api.unsplash.com/photos/random/?orientation=landscape&count=1&client_id=Jjl5auiyfxoz-DTmaFtBj29XEL3sPNuQq5g1c5FoOPA")
+    // .then((res)=>{
+    //     // console.log(res.data[0].urls.full)
+    //    return  setbg(res.data[0].urls.full)
+    // })
+
+    // }, [])
     const myStyle={
         backgroundImage: 
  `url(${bg})`,
         height:'100vh',
-      
         color:"white",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        
     };
 
   return (
-    <div style={myStyle}>
-        {/* <img src={bg}/> */}
+    <div style={myStyle} id={style.myStyle}>
+      <div className={style.topbox}>
+        <div>Links</div>
+        <div> <Weather/> </div>
+      </div>
+      <div className={style.timeBox}>
+      <Time/>
+      </div>
+
+      <div>
+       <Quotes/>
+      </div>
+      
+   
+       
     </div>
   )
 }
