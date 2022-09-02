@@ -54,6 +54,7 @@ const Weather = () => {
   
  
   return (
+
     <div>
     <div>
       {
@@ -64,6 +65,7 @@ const Weather = () => {
     </div>
     <div>{temp}°C</div>
     </div>
+
   )
 }
 
