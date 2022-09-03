@@ -54,7 +54,16 @@ const Weather = () => {
   
  
   return (
-    <div>Weather{temp}°C</div>
+    <div>
+    <div>
+      {
+        if({temp}<=25 && {temp}>=15){
+          
+        }
+      }
+    </div>
+    <div>{temp}°C</div>
+    </div>
   )
 }
 
