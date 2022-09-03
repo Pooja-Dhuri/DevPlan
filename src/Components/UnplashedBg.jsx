@@ -7,6 +7,7 @@ import Quotes from "./Quotes";
 import { Todo } from "./Todo/Todo";
 import News from "./News";
 import { Box, Flex } from "@chakra-ui/react";
+import Links from "./Links";
 
 const UnplashedBg = () => {
   const [title, setTitle] = useState("Palau");
@@ -39,7 +40,7 @@ const UnplashedBg = () => {
   return (
     <div style={myStyle} id={style.myStyle}>
       <div className={style.topbox}>
-        <div>Links</div>
+        <div><Links/></div>
         <div><Weather/></div>
       </div>
       <div className={style.timeBox}>

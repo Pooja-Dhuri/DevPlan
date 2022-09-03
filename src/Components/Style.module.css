@@ -37,6 +37,7 @@ input:focus{
 .Country{
     /* border:2px solid red; */
     width: max-content;
+    font-size: 15px;
 }
 .TodoNews{
     /* border:2px solid plum; */
@@ -55,10 +56,11 @@ input:focus{
 .weatherContainer{
     display: flex;
     gap: 20px;
+    font-size: 20px;
     /* border: 2px solid yellow; */
 }
 .weatherContainer>div:first-child{
-    font-size: 40px;
+    font-size: 50px;
 }
 .newsmain{
     /* overflow: scroll; */
