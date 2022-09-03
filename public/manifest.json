@@ -4,12 +4,11 @@
   "version": "1.0.0",
   "manifest_version": 3,
 
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
-    "default_title":"hii popup",
     "default_icon":{
-      "16":"devplan-logo.png",
-      "128":"devplan-logo.png"
+      "16":"logo.png",
+      "128":"logo.png"
     }
   },
 
