@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Text } from "@chakra-ui/react";
+import style from "./Style.module.css";
 
 const Time = () => {
   const locale = "en";
@@ -33,9 +35,9 @@ const Time = () => {
   return (
     <div>
       <h1 style={{fontSize:"120px",fontWeight:"500",margin:"5px 0px"}}>{time} </h1>
-      <h2>{wish}Developer</h2>
-      <h2>What is your goal for Today?</h2>
-      <input style={{border:"none"}}/>
+      <Text fontSize="6xl">{wish}Developer</Text>
+      <Text fontSize="4xl">What is your goal for Today?</Text>
+      <input style={{background:"none",height:"50px",width:"500px"}}className={style.timerinput}/>
     </div>
   );
 };
