@@ -35,8 +35,8 @@ const Weather = () => {
         }&lon=${longitude && longitude}&apiKey=6b84dcc2fc3441b19d2cb5a22499c07e`
       )
       .then((res) => {
-        console.log(res);
-        console.log(res.data.features[0].properties.city);
+       // console.log(res);
+       // console.log(res.data.features[0].properties.city);
         setCity(res.data.features[0].properties.city);
       })
       .catch((err) => {
@@ -58,7 +58,7 @@ const Weather = () => {
       .then((res) => {
         // console.log(res.data.main.temp)
         const k = res.data.main.temp - 273.15;
-        console.log(k.toFixed(0));
+        //console.log(k.toFixed(0));
         setTemp(k.toFixed(0));
       });
   };
