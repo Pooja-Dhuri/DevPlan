@@ -1,0 +1,44 @@
+{
+    "quotes":[
+        {
+            "id":1,
+            "quote":"Don't be pushed around by the fears in your mind. Be led by the dreams in your heart."
+        },
+        {
+            "id":2,
+            "quote":"“Never lose hope. Storms make people stronger and never last forever.”"
+        },
+        {
+            "id":3,
+            "quote":"“Be brave to stand for what you believe in even if you stand alone.”"
+        },
+        {
+            "id":4,
+            "quote":"“Life is about accepting the challenges along the way, choosing to keep moving forward, and savoring the journey.”"
+        },
+        {
+            "id":5,
+            "quote":"“Be grateful for what you already have while you pursue your goals.If you aren’t grateful for what you already have, what makes you think you would be happy with more.”"
+        },
+        {
+            "id":6,
+            "quote":"“Start each day with a positive thought and a grateful heart.”"
+        },
+        {
+            "id":7,
+            "quote":"“Pursue what catches your heart, not what catches your eyes.”"
+        },
+        {
+            "id":8,
+            "quote":"“Success is not how high you have climbed, but how you make a positive difference to the world.”"
+        },
+        {
+            "id":9,
+            "quote":"“Do what is right, not what is easy nor what is popular.”― Roy T. Bennett, The Light in the Heart"
+        },
+        {
+            "id":10,
+            "quote":"“It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform.”"
+        }
+    ]
+}
